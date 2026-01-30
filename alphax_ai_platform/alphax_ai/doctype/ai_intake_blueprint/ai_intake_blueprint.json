@@ -1,0 +1,141 @@
+{
+  "doctype": "DocType",
+  "name": "AI Intake Blueprint",
+  "module": "AlphaX AI",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "autoname": "field:blueprint_name",
+  "title_field": "blueprint_name",
+  "fields": [
+    {
+      "fieldname": "blueprint_name",
+      "label": "Blueprint Name",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "target_doctype",
+      "label": "Target DocType",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "is_template",
+      "label": "Is Template",
+      "fieldtype": "Check",
+      "default": 0,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "section_input",
+      "label": "Input & OCR",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "input_types",
+      "label": "Allowed Input Types",
+      "fieldtype": "MultiSelect",
+      "options": "PDF\nImage\nExcel",
+      "default": "PDF\nImage"
+    },
+    {
+      "fieldname": "default_ocr_engine",
+      "label": "Default OCR Engine",
+      "fieldtype": "Select",
+      "options": "Azure\nOn-Prem",
+      "default": "On-Prem"
+    },
+    {
+      "fieldname": "allow_user_override",
+      "label": "Allow User Override",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "language_hint",
+      "label": "Language Hint",
+      "fieldtype": "Select",
+      "options": "auto\nen\nar",
+      "default": "auto"
+    },
+    {
+      "fieldname": "column_break_ocr",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "extraction_mode",
+      "label": "Extraction Mode",
+      "fieldtype": "Select",
+      "options": "Schema-first\nFree-form",
+      "default": "Schema-first",
+      "reqd": 1
+    },
+    {
+      "fieldname": "mapping_template",
+      "label": "Mapping Template",
+      "fieldtype": "Link",
+      "options": "AI Mapping Template"
+    },
+    {
+      "fieldname": "section_schema",
+      "label": "Extraction Schema",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "schema_fields",
+      "label": "Schema Fields",
+      "fieldtype": "Table",
+      "options": "AI Extraction Schema Field"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes / Instructions",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    },
+    {
+      "role": "ERPNext System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "HR Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Purchase Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "in_create": 1
+}

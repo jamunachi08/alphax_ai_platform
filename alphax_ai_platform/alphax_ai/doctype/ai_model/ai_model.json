@@ -1,0 +1,57 @@
+{
+  "doctype": "DocType",
+  "name": "AI Model",
+  "module": "AlphaX AI",
+  "track_changes": 1,
+  "custom": 0,
+  "istable": 0,
+  "fields": [
+    {
+      "fieldname": "model_key",
+      "label": "Model Key",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "provider",
+      "label": "Provider",
+      "fieldtype": "Link",
+      "options": "AI Provider",
+      "reqd": 1
+    },
+    {
+      "fieldname": "model_name",
+      "label": "Model Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "context_window",
+      "label": "Context Window",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "price_in_per_1k",
+      "label": "Input $/1K Tokens",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "price_out_per_1k",
+      "label": "Output $/1K Tokens",
+      "fieldtype": "Currency"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0
+    }
+  ],
+  "autoname": "field:model_key"
+}

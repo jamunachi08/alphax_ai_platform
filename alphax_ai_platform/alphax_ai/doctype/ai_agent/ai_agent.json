@@ -1,0 +1,65 @@
+{
+  "doctype": "DocType",
+  "name": "AI Agent",
+  "module": "AlphaX AI",
+  "track_changes": 1,
+  "custom": 0,
+  "istable": 0,
+  "fields": [
+    {
+      "fieldname": "agent_key",
+      "label": "Agent Key",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "agent_name",
+      "label": "Agent Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "system_prompt",
+      "label": "System Prompt",
+      "fieldtype": "Link",
+      "options": "AI Prompt"
+    },
+    {
+      "fieldname": "model_override",
+      "label": "Model Override",
+      "fieldtype": "Link",
+      "options": "AI Model"
+    },
+    {
+      "fieldname": "temperature",
+      "label": "Temperature",
+      "fieldtype": "Float",
+      "default": 0.2
+    },
+    {
+      "fieldname": "max_steps",
+      "label": "Max Steps",
+      "fieldtype": "Int",
+      "default": 4
+    },
+    {
+      "fieldname": "enabled",
+      "label": "Enabled",
+      "fieldtype": "Check",
+      "default": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0
+    }
+  ],
+  "autoname": "field:agent_key"
+}

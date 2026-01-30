@@ -1,0 +1,207 @@
+[
+  {
+    "doctype": "AI Intake Blueprint",
+    "name": "Purchase Order Intake (Template)",
+    "blueprint_name": "Purchase Order Intake (Template)",
+    "target_doctype": "Purchase Order",
+    "is_template": 1,
+    "input_types": "PDF\nImage\nExcel",
+    "default_ocr_engine": "Azure",
+    "allow_user_override": 1,
+    "language_hint": "auto",
+    "extraction_mode": "Schema-first",
+    "mapping_template": null,
+    "notes": "Starter template for extracting vendor quotations / purchase requests into a Draft Purchase Order. Review before submit.",
+    "schema_fields": [
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "supplier",
+        "label": "Supplier",
+        "data_type": "String",
+        "required": 1,
+        "confidence_threshold": 0.7,
+        "normalize_rule": "Trim",
+        "maps_to": "supplier"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "transaction_date",
+        "label": "Transaction Date",
+        "data_type": "Date",
+        "required": 0,
+        "confidence_threshold": 0.6,
+        "normalize_rule": "Date (ISO)",
+        "maps_to": "transaction_date"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "schedule_date",
+        "label": "Schedule Date",
+        "data_type": "Date",
+        "required": 0,
+        "confidence_threshold": 0.6,
+        "normalize_rule": "Date (ISO)",
+        "maps_to": "schedule_date"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "company",
+        "label": "Company",
+        "data_type": "String",
+        "required": 0,
+        "confidence_threshold": 0.6,
+        "normalize_rule": "Trim",
+        "maps_to": "company"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "item_code",
+        "label": "Item Code/Description",
+        "data_type": "String",
+        "required": 1,
+        "confidence_threshold": 0.65,
+        "normalize_rule": "Trim",
+        "table_child": "items",
+        "table_row_field": "item_code"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "qty",
+        "label": "Quantity",
+        "data_type": "Float",
+        "required": 1,
+        "confidence_threshold": 0.65,
+        "normalize_rule": "Number",
+        "table_child": "items",
+        "table_row_field": "qty"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "rate",
+        "label": "Rate",
+        "data_type": "Float",
+        "required": 0,
+        "confidence_threshold": 0.6,
+        "normalize_rule": "Number",
+        "table_child": "items",
+        "table_row_field": "rate"
+      }
+    ]
+  },
+  {
+    "doctype": "AI Intake Blueprint",
+    "name": "Employee Creation Intake (Template)",
+    "blueprint_name": "Employee Creation Intake (Template)",
+    "target_doctype": "Employee",
+    "is_template": 1,
+    "input_types": "PDF\nImage\nExcel",
+    "default_ocr_engine": "On-Prem",
+    "allow_user_override": 1,
+    "language_hint": "auto",
+    "extraction_mode": "Schema-first",
+    "mapping_template": null,
+    "notes": "Starter template for extracting Employee details from ID/CV/Forms into a Draft Employee. Mask PII and require HR approval for submit.",
+    "schema_fields": [
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "employee_name",
+        "label": "Employee Name",
+        "data_type": "String",
+        "required": 1,
+        "confidence_threshold": 0.7,
+        "normalize_rule": "Trim",
+        "maps_to": "employee_name"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "first_name",
+        "label": "First Name",
+        "data_type": "String",
+        "required": 0,
+        "confidence_threshold": 0.6,
+        "normalize_rule": "Trim",
+        "maps_to": "first_name"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "last_name",
+        "label": "Last Name",
+        "data_type": "String",
+        "required": 0,
+        "confidence_threshold": 0.6,
+        "normalize_rule": "Trim",
+        "maps_to": "last_name"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "date_of_birth",
+        "label": "Date of Birth",
+        "data_type": "Date",
+        "required": 0,
+        "confidence_threshold": 0.6,
+        "normalize_rule": "Date (ISO)",
+        "maps_to": "date_of_birth"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "gender",
+        "label": "Gender",
+        "data_type": "String",
+        "required": 0,
+        "confidence_threshold": 0.6,
+        "normalize_rule": "Trim",
+        "maps_to": "gender"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "nationality",
+        "label": "Nationality",
+        "data_type": "String",
+        "required": 0,
+        "confidence_threshold": 0.6,
+        "normalize_rule": "Trim",
+        "maps_to": "nationality"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "designation",
+        "label": "Designation",
+        "data_type": "String",
+        "required": 0,
+        "confidence_threshold": 0.6,
+        "normalize_rule": "Trim",
+        "maps_to": "designation"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "date_of_joining",
+        "label": "Date of Joining",
+        "data_type": "Date",
+        "required": 0,
+        "confidence_threshold": 0.6,
+        "normalize_rule": "Date (ISO)",
+        "maps_to": "date_of_joining"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "cell_number",
+        "label": "Mobile",
+        "data_type": "String",
+        "required": 0,
+        "confidence_threshold": 0.6,
+        "normalize_rule": "Trim",
+        "maps_to": "cell_number"
+      },
+      {
+        "doctype": "AI Extraction Schema Field",
+        "field_key": "personal_email",
+        "label": "Personal Email",
+        "data_type": "String",
+        "required": 0,
+        "confidence_threshold": 0.6,
+        "normalize_rule": "Trim",
+        "maps_to": "personal_email"
+      }
+    ]
+  }
+]

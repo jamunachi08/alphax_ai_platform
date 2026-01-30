@@ -1,0 +1,53 @@
+{
+  "doctype": "DocType",
+  "name": "AI Provider",
+  "module": "AlphaX AI",
+  "track_changes": 1,
+  "custom": 0,
+  "istable": 0,
+  "fields": [
+    {
+      "fieldname": "provider_key",
+      "label": "Provider Key",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "provider_type",
+      "label": "Provider Type",
+      "fieldtype": "Select",
+      "options": "openai\nazure_openai\ngemini\nclaude\nollama\nmock",
+      "reqd": 1
+    },
+    {
+      "fieldname": "is_default",
+      "label": "Is Default",
+      "fieldtype": "Check",
+      "default": 0
+    },
+    {
+      "fieldname": "base_url",
+      "label": "Base URL",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "secret_env_var",
+      "label": "Secret Env Var",
+      "fieldtype": "Data",
+      "description": "Env var name, e.g. OPENAI_API_KEY"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0
+    }
+  ],
+  "autoname": "field:provider_key"
+}

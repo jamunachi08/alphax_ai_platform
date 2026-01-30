@@ -1,0 +1,50 @@
+{
+  "doctype": "DocType",
+  "name": "AI Platform Settings",
+  "module": "AlphaX AI",
+  "issingle": 1,
+  "track_changes": 1,
+  "custom": 0,
+  "istable": 0,
+  "fields": [
+    {
+      "fieldname": "default_provider",
+      "label": "Default Provider",
+      "fieldtype": "Select",
+      "options": "mock\nopenai",
+      "default": "mock"
+    },
+    {
+      "fieldname": "default_model",
+      "label": "Default Model",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "enable_streaming",
+      "label": "Enable Streaming",
+      "fieldtype": "Check",
+      "default": 0
+    },
+    {
+      "fieldname": "allow_write_tools",
+      "label": "Allow Write Tools",
+      "fieldtype": "Check",
+      "default": 0
+    },
+    {
+      "fieldname": "monthly_budget_usd",
+      "label": "Monthly Budget (USD)",
+      "fieldtype": "Currency",
+      "default": 0
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

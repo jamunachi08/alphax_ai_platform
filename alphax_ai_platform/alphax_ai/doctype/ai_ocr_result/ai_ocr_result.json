@@ -1,0 +1,65 @@
+{
+  "doctype": "DocType",
+  "name": "AI OCR Result",
+  "module": "AlphaX AI",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "autoname": "hash",
+  "fields": [
+    {
+      "fieldname": "ingested_document",
+      "label": "Ingested Document",
+      "fieldtype": "Link",
+      "options": "AI Ingested Document",
+      "reqd": 1
+    },
+    {
+      "fieldname": "pages",
+      "label": "Pages",
+      "fieldtype": "Int",
+      "default": 1
+    },
+    {
+      "fieldname": "extracted_text",
+      "label": "Extracted Text",
+      "fieldtype": "Long Text"
+    },
+    {
+      "fieldname": "extracted_tables_json",
+      "label": "Extracted Tables JSON",
+      "fieldtype": "Long Text",
+      "description": "JSON array of tables/rows"
+    },
+    {
+      "fieldname": "extraction_meta_json",
+      "label": "Extraction Meta JSON",
+      "fieldtype": "Long Text",
+      "description": "Extractor metadata (engine/mode)"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1
+    },
+    {
+      "role": "Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1
+    }
+  ]
+}

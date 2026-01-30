@@ -1,0 +1,9 @@
+.alphax-wiz { max-width: 1100px; margin: 0 auto; }
+.alphax-wiz-steps { display:flex; gap:10px; margin: 10px 0 16px; }
+.alphax-wiz-steps .step { padding:6px 10px; border:1px solid var(--border-color); border-radius: 999px; background: var(--control-bg); }
+.alphax-wiz-steps .step.active { font-weight: 700; }
+.alphax-wiz-card { border:1px solid var(--border-color); border-radius: 14px; padding: 16px; background: var(--card-bg); }
+.alphax-fields { border:1px dashed var(--border-color); border-radius: 12px; padding: 10px; max-height: 360px; overflow:auto; }
+.alphax-field-row { display:flex; align-items:center; justify-content:space-between; padding:8px 8px; border-bottom:1px solid rgba(0,0,0,0.05); }
+.alphax-field-row:last-child { border-bottom:none; }
+.alphax-field-label { margin-left: 8px; font-weight: 600; }

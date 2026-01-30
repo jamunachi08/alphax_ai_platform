@@ -1,0 +1,12 @@
+.alphax-ai-shell { max-width: 980px; margin: 0 auto; }
+.alphax-ai-header { display:flex; align-items:center; justify-content:space-between; margin: 12px 0 16px; }
+.alphax-ai-title { font-size: 18px; font-weight: 700; }
+.alphax-ai-subtitle { font-size: 12px; opacity: .75; }
+.alphax-ai-card { border: 1px solid var(--border-color); border-radius: 14px; padding: 14px; background: var(--card-bg); box-shadow: 0 6px 18px rgba(0,0,0,.04); }
+.alphax-ai-row { margin-bottom: 10px; }
+.alphax-ai-row-right { display:flex; justify-content:flex-end; }
+.alphax-ai-output { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border-color); max-height: 420px; overflow: auto; }
+.alphax-ai-msg { padding: 10px 12px; border-radius: 12px; margin-bottom: 10px; white-space: pre-wrap; }
+.alphax-ai-msg.user { background: rgba(31, 78, 216, .08); }
+.alphax-ai-msg.assistant { background: rgba(0,0,0,.04); }
+.alphax-ai-msg.system { background: rgba(0,0,0,.02); font-style: italic; }

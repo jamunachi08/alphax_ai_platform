@@ -1,0 +1,58 @@
+{
+  "doctype": "DocType",
+  "name": "AI Chat Message",
+  "module": "AlphaX AI",
+  "track_changes": 1,
+  "custom": 0,
+  "istable": 0,
+  "autoname": "hash",
+  "fields": [
+    {
+      "fieldname": "session",
+      "label": "Session",
+      "fieldtype": "Link",
+      "options": "AI Chat Session",
+      "reqd": 1
+    },
+    {
+      "fieldname": "role",
+      "label": "Role",
+      "fieldtype": "Select",
+      "options": "user\nassistant\ntool\nsystem",
+      "reqd": 1
+    },
+    {
+      "fieldname": "content",
+      "label": "Content",
+      "fieldtype": "Long Text"
+    },
+    {
+      "fieldname": "tool_call_json",
+      "label": "Tool Call JSON",
+      "fieldtype": "Code",
+      "options": "JSON"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0
+    },
+    {
+      "role": "System User",
+      "read": 1,
+      "write": 0,
+      "create": 1,
+      "delete": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0
+    }
+  ]
+}

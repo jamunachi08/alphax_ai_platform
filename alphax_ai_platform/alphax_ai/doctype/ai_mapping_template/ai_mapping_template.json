@@ -1,0 +1,66 @@
+{
+  "doctype": "DocType",
+  "name": "AI Mapping Template",
+  "module": "AlphaX AI",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "autoname": "hash",
+  "fields": [
+    {
+      "fieldname": "template_name",
+      "label": "Template Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "target_doctype",
+      "label": "Target Doctype",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "reqd": 1
+    },
+    {
+      "fieldname": "instructions",
+      "label": "Instructions",
+      "fieldtype": "Long Text",
+      "description": "How to map extracted fields to ERP fields"
+    },
+    {
+      "fieldname": "json_schema",
+      "label": "Expected JSON Schema",
+      "fieldtype": "Long Text",
+      "description": "Optional schema for validator"
+    },
+    {
+      "fieldname": "active",
+      "label": "Active",
+      "fieldtype": "Check",
+      "default": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1
+    },
+    {
+      "role": "Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1
+    }
+  ]
+}

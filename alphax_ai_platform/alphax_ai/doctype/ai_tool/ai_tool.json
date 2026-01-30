@@ -1,0 +1,53 @@
+{
+  "doctype": "DocType",
+  "name": "AI Tool",
+  "module": "AlphaX AI",
+  "track_changes": 1,
+  "custom": 0,
+  "istable": 0,
+  "fields": [
+    {
+      "fieldname": "tool_key",
+      "label": "Tool Key",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "label",
+      "label": "Label",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "executor_path",
+      "label": "Executor Path",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "is_write",
+      "label": "Is Write Tool",
+      "fieldtype": "Check",
+      "default": 0
+    },
+    {
+      "fieldname": "enabled",
+      "label": "Enabled",
+      "fieldtype": "Check",
+      "default": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0
+    }
+  ],
+  "autoname": "field:tool_key"
+}

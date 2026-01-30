@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alphax_ai_platform"
+version = "0.5.1"
+description = "AlphaX AI Platform - enterprise AI layer for ERPNext/Frappe"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["frappe>=15.0.0"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]

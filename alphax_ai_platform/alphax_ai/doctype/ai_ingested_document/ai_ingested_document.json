@@ -1,0 +1,103 @@
+{
+  "doctype": "DocType",
+  "name": "AI Ingested Document",
+  "module": "AlphaX AI",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "autoname": "hash",
+  "fields": [
+    {
+      "fieldname": "source_file",
+      "label": "Source File",
+      "fieldtype": "Link",
+      "options": "File",
+      "reqd": 1
+    },
+    {
+      "fieldname": "file_name",
+      "label": "File Name",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "file_url",
+      "label": "File URL",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "content_type",
+      "label": "Content Type",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "target_doctype",
+      "label": "Target Doctype",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "reqd": 1
+    },
+    {
+      "fieldname": "blueprint",
+      "label": "Blueprint",
+      "fieldtype": "Link",
+      "options": "AI Intake Blueprint",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "ocr_engine",
+      "label": "OCR Engine",
+      "fieldtype": "Select",
+      "options": "Azure\nOn-Prem",
+      "default": "On-Prem",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "language_hint",
+      "label": "Language Hint",
+      "fieldtype": "Select",
+      "options": "auto\nen\nar",
+      "default": "auto"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Queued\nExtracted\nParsed\nDraft Created\nPending Approval\nFailed",
+      "default": "Queued"
+    },
+    {
+      "fieldname": "created_document",
+      "label": "Created Document",
+      "fieldtype": "Dynamic Link",
+      "options": "target_doctype",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1
+    },
+    {
+      "role": "Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1
+    }
+  ]
+}

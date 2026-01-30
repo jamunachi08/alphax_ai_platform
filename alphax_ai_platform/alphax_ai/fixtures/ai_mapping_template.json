@@ -1,0 +1,18 @@
+[
+  {
+    "doctype": "AI Mapping Template",
+    "template_name": "PO Mapping Template (Starter)",
+    "target_doctype": "Purchase Order",
+    "instructions": "Starter mapping: supplier/date/currency + items list (description/qty/rate/uom). Edit schema fields mapping to match your ERP items strategy.",
+    "json_schema": "{\"defaults\": {\"naming_series\": \"PUR-ORD-.YYYY.-\"}}",
+    "active": 1
+  },
+  {
+    "doctype": "AI Mapping Template",
+    "template_name": "Employee Mapping Template (Starter)",
+    "target_doctype": "Employee",
+    "instructions": "Starter mapping for Employee master creation. For KSA, create a custom field (e.g., custom_national_id) and update mapping accordingly.",
+    "json_schema": "{\"defaults\": {\"status\": \"Active\"}}",
+    "active": 1
+  }
+]

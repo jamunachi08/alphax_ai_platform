@@ -1,0 +1,9 @@
+{
+  "doctype": "Page",
+  "name": "alphax-ai-blueprint-wizard",
+  "title": "AlphaX Blueprint Wizard",
+  "module": "AlphaX AI",
+  "standard": 1,
+  "icon": "octicon octicon-cpu",
+  "restrict_to_domain": null
+}

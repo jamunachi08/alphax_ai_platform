@@ -1,0 +1,95 @@
+{
+  "doctype": "DocType",
+  "name": "AI Extraction Schema Field",
+  "module": "AlphaX AI",
+  "custom": 0,
+  "istable": 1,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "field_key",
+      "label": "Field Key",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "label",
+      "label": "Label",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "data_type",
+      "label": "Data Type",
+      "fieldtype": "Select",
+      "options": "String\nDate\nFloat\nInt\nTable",
+      "default": "String",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "required",
+      "label": "Required",
+      "fieldtype": "Check",
+      "default": 0,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "confidence_threshold",
+      "label": "Confidence Threshold",
+      "fieldtype": "Float",
+      "default": 0.6
+    },
+    {
+      "fieldname": "example_value",
+      "label": "Example Value",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "normalize_rule",
+      "label": "Normalize Rule",
+      "fieldtype": "Select",
+      "options": "None\nTrim\nUppercase\nLowercase\nDate (ISO)\nNumber",
+      "default": "None"
+    },
+    {
+      "fieldname": "maps_to",
+      "label": "Maps To (fieldname)",
+      "fieldtype": "Data",
+      "description": "Target fieldname on the DocType or child table row"
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "table_child",
+      "label": "Child Table Fieldname",
+      "fieldtype": "Data",
+      "description": "If mapping to a child table, put the child table fieldname (e.g. items)"
+    },
+    {
+      "fieldname": "table_row_field",
+      "label": "Child Row Fieldname",
+      "fieldtype": "Data",
+      "description": "If mapping to a child table, put the fieldname on the child row (e.g. item_code)"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

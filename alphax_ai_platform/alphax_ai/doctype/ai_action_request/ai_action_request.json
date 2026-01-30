@@ -1,0 +1,86 @@
+{
+  "doctype": "DocType",
+  "name": "AI Action Request",
+  "module": "AlphaX AI",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "autoname": "hash",
+  "fields": [
+    {
+      "fieldname": "action_type",
+      "label": "Action Type",
+      "fieldtype": "Select",
+      "options": "Create Draft\nUpdate Draft\nSubmit Document\nCreate Master",
+      "reqd": 1
+    },
+    {
+      "fieldname": "target_doctype",
+      "label": "Target Doctype",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "reqd": 1
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Pending\nApproved\nRejected\nExecuted\nFailed",
+      "default": "Pending"
+    },
+    {
+      "fieldname": "source_ingested_document",
+      "label": "Source Ingested Document",
+      "fieldtype": "Link",
+      "options": "AI Ingested Document"
+    },
+    {
+      "fieldname": "payload_json",
+      "label": "Payload JSON",
+      "fieldtype": "Long Text",
+      "description": "Proposed document payload"
+    },
+    {
+      "fieldname": "approver",
+      "label": "Approver",
+      "fieldtype": "Link",
+      "options": "User",
+      "read_only": 1
+    },
+    {
+      "fieldname": "decision_notes",
+      "label": "Decision Notes",
+      "fieldtype": "Long Text"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes / Validation Errors",
+      "fieldtype": "Long Text",
+      "description": "Validation output or reviewer notes"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1
+    },
+    {
+      "role": "Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1
+    }
+  ]
+}

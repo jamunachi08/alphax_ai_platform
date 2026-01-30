@@ -1,0 +1,55 @@
+{
+  "doctype": "DocType",
+  "name": "AI Prompt Version",
+  "module": "AlphaX AI",
+  "track_changes": 1,
+  "custom": 0,
+  "istable": 0,
+  "fields": [
+    {
+      "fieldname": "prompt",
+      "label": "Prompt",
+      "fieldtype": "Link",
+      "options": "AI Prompt",
+      "reqd": 1
+    },
+    {
+      "fieldname": "version",
+      "label": "Version",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Draft\nActive\nRetired",
+      "default": "Draft"
+    },
+    {
+      "fieldname": "content",
+      "label": "Content",
+      "fieldtype": "Code",
+      "options": "Text",
+      "reqd": 1
+    },
+    {
+      "fieldname": "change_notes",
+      "label": "Change Notes",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0
+    }
+  ],
+  "autoname": "hash"
+}
