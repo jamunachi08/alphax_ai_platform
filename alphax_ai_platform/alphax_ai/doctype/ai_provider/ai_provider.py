@@ -2,5 +2,5 @@ import frappe
 from frappe.model.document import Document
 
 
-class AiProvider(Document):
+class AIProvider(Document):
     pass
