@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="alphax_ai_platform",
-    version="0.5.1",
+    version="0.5.2",
     description="AlphaX AI - enterprise AI layer for ERPNext/Frappe",
     author="AlphaX",
     packages=find_packages(),
